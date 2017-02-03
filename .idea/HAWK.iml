@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/HAWK-SDK/hawk" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HAWK-SDK" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.5.2 (C:\Users\Supratik Banerjee\AppData\Local\Programs\Python\Python35-32\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

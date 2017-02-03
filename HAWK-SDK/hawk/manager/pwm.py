@@ -2,7 +2,7 @@ from hardware_abstract_layer.pwm import PWM
 from Hardware_Abstract_layer.pwm import ControlInputToPWM
 
 
-class PWMControlManager:
+class PWMManager:
     def __init__(self):
         self.PWM = PWM()
 
@@ -34,11 +34,10 @@ class PWMControlManager:
         self.PWM.set_motor_value(channel_name, value)
 
 
-
-class PWMManager:
+class PWMControlManager:
     def __init__(self):
         """ Initialize all components of PWM manager"""
-        self.pwm=0
+        self.pwm = 0
         self.ToPWM = ControlInputToPWM()
 
     def map_servo_mid_range_pwm(self, percentage, bit_precision):
@@ -49,7 +48,6 @@ class PWMManager:
             self.pwm = self.ToPWM.bit_precision_4_mid_map(percentage, 1)
         elif bit_precision == 8:
             self.pwm = self.ToPWM.bit_precision_8_mid_map(percentage, 1)
-
         return self.pwm
 
     def map_motor_full_range_pwm(self, percentage, bit_precision):
