@@ -6,14 +6,14 @@ class TelemetryManager:
         pass
         self.NetworkAdapter = network.NetworkAdapter()
 
-    def initialize_server_connection(self, ip_address, port):
+    def initialize_server_connection(self, port):
         """Initialize server connection by calling Network Adapter"""
-        server_connection = self.NetworkAdapter.initialize_server_connection(ip_address, port)
+        server_connection = self.NetworkAdapter.initialize_server_connection(port)
         return server_connection
 
-    def initialize_client_connection(self, port):
+    def initialize_client_connection(self,ip_address, port):
         """Initialize client connection by calling Network Adapter"""
-        client_connection = self.NetworkAdapter.initialize_client_connection(port)
+        client_connection = self.NetworkAdapter.initialize_client_connection(ip_address, port)
         return client_connection
 
     def send(self, data, connection):
