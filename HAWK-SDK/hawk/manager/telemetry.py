@@ -11,7 +11,7 @@ class TelemetryManager:
         server_connection = self.NetworkAdapter.initialize_server_connection(port)
         return server_connection
 
-    def initialize_client_connection(self,ip_address, port):
+    def initialize_client_connection(self, ip_address, port):
         """Initialize client connection by calling Network Adapter"""
         client_connection = self.NetworkAdapter.initialize_client_connection(ip_address, port)
         return client_connection
@@ -34,9 +34,9 @@ class CompressionManager:
         self.forward_bit_mapping = {0: '0000', 1: '0001', 2: '0010', 3: '0011', 4: '0100', 5: '0101', 6: '0110',
                                     7: '0111', 8: '1000', 9: '1001', 'A': '1010', 'B': '1011', 'C': '1100', 'D': '1101',
                                     'E': '1111'}
-        self.byte_string = bytes('')
+        #self.byte_string = bytes('')
 
-    def get_byte(self, p):
+    def compress_4_bits(self, p):
         s = str(p)
         b = '0'
         if len(s) < 2:
@@ -49,26 +49,20 @@ class CompressionManager:
         byte = bytes([z[0]])
         return byte
 
-    def compress_8_bits(self, inputs):
+    '''def compress_4_bits(self, inputs):
         for inp in inputs:
             self.byte_string += self.get_byte(inp)
-        return self.byte_string
+        return self.byte_string'''
 
-    def decompress_8_bits(self, inputs):
+    def decompress_4_bits(self, o):
         output = []
-        for inp in inputs:
-            s = str(bin(ord(inp))[2:].zfill(8))
+        #print(o)
+        for j in o:
+            #print(j)
+            s = str(bin(j)[2:].zfill(8))
             b1 = s[:4]
             b2 = s[4:]
             p1 = str(self.inverse_bit_mapping[b1])
             p2 = str(self.inverse_bit_mapping[b2])
-            output.append(int(p1+p2))
+            output.append(p1 + p2)
         return output
-
-
-
-
-
-
-
-

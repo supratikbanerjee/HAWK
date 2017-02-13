@@ -80,6 +80,7 @@ class InputDeviceManager:
             # print("Detected joystick '", joysticks[-1].get_name(), "'")
 
     def get_event(self):
+        self.event = pygame.event.get()
         return self.event
 
     def get_l_x_axis(self, event):

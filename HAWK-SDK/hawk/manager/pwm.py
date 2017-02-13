@@ -1,5 +1,5 @@
 from hardware_abstract_layer.pwm import PWM
-from Hardware_Abstract_layer.pwm import ControlInputToPWM
+from hardware_abstract_layer.pwm import ControlInputToPWM
 
 
 class PWMManager:
