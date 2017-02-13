@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac93dae6-6ee4-418f-b72c-9a04c12180a4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HAWK-SDK/hawk/Exceptions/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flightcontrol.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/flightcontrol.py" afterPath="$PROJECT_DIR$/Examples/flightcontrol.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/groundstation.py" afterPath="$PROJECT_DIR$/Examples/groundstation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groundstation.py" afterPath="$PROJECT_DIR$/groundstation.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,7 +64,7 @@
         </entry>
       </file>
       <file leaf-file-name="flightcontrol.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flightcontrol.py">
+        <entry file="file://$PROJECT_DIR$/Examples/flightcontrol.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -78,7 +74,7 @@
         </entry>
       </file>
       <file leaf-file-name="groundstation.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/groundstation.py">
+        <entry file="file://$PROJECT_DIR$/Examples/groundstation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
               <caret line="48" column="33" lean-forward="true" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
@@ -180,69 +176,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK-SDK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK-SDK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hawk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK-SDK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hawk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exceptions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK-SDK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hardware_abstract_layer" />
+              <option name="myItemId" value="Examples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -256,31 +190,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\Examples" />
       <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK" />
       <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\HAWK-SDK\hawk\manager" />
       <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\HAWK-SDK\hawk" />
       <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\HAWK-SDK" />
-      <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\HAWK-SDK\hardware_abstract_layer" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.groundstation (2)">
-    <configuration default="false" name="groundstation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="HAWK" />
-      <option name="SCRIPT_NAME" value="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\groundstation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.groundstation (3)">
     <configuration default="false" name="groundstation (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -293,7 +210,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="HAWK" />
-      <option name="SCRIPT_NAME" value="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\groundstation.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\Examples\groundstation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -327,7 +244,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="HAWK" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/groundstation.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\Examples\groundstation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -345,6 +262,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="HAWK" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="groundstation (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="HAWK" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/groundstation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -484,19 +418,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.groundstation" />
-      <item index="1" class="java.lang.String" itemvalue="Python.groundstation (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.telemetry" />
-      <item index="3" class="java.lang.String" itemvalue="Python.groundstation (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.pwm (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.groundstation (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.telemetry" />
+      <item index="2" class="java.lang.String" itemvalue="Python.groundstation (2)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.pwm (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.groundstation (3)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.groundstation (2)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pwm (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.groundstation (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.telemetry" />
-        <item index="4" class="java.lang.String" itemvalue="Python.groundstation" />
+        <item index="0" class="java.lang.String" itemvalue="Python.groundstation (3)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.groundstation (2)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pwm (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.groundstation (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.telemetry" />
       </list>
     </recent_temporary>
   </component>
@@ -515,9 +449,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -887,7 +821,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flightcontrol.py">
+    <entry file="file://$PROJECT_DIR$/Examples/flightcontrol.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -931,7 +865,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/groundstation.py">
+    <entry file="file://$PROJECT_DIR$/Examples/groundstation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="48" column="33" lean-forward="true" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
