@@ -1,16 +1,11 @@
 from manager import io
-
 from manager import telemetry
 
 TelemetryManager = telemetry.TelemetryManager()
 CompressionManager = telemetry.CompressionManager()
-
 InputControlManager = io.InputControlManager()
 InputDeviceManager = io.InputDeviceManager()
 
-# connection = TelemetryManager.initialize_server_connection(12345)
-
-# InputDeviceManager() not sure if initialisation necessary
 j = InputDeviceManager.get_device()
 print("joystick detected", j)
 bX = 0
@@ -35,7 +30,6 @@ while 1:
             bY = 0
         print(lx, ly, rx, rt, bX, bY)
 
-        # CompressionManager() not sure if initialisation necessary
         mssg = CompressionManager.compress_4_bits(str(InputControlManager.input_percentage_mid_range(lx, 0.25)) + str(
             InputControlManager.input_percentage_mid_range(ly, 0.25))) + CompressionManager.compress_4_bits(
             str(InputControlManager.input_percentage_mid_range(rx, 0.25)) + str(
