@@ -56,13 +56,12 @@ class CompressionManager:
 
     def decompress_4_bits(self, o):
         output = []
-        #print(o)
         for j in o:
-            #print(j)
             s = str(bin(j)[2:].zfill(8))
             b1 = s[:4]
             b2 = s[4:]
             p1 = str(self.inverse_bit_mapping[b1])
             p2 = str(self.inverse_bit_mapping[b2])
-            output.append(p1 + p2)
+            output.append(p1)
+            output.append(p2)
         return output
