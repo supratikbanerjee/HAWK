@@ -61,6 +61,6 @@ class CompressionManager:
             b2 = s[4:]
             p1 = str(self.inverse_bit_mapping[b1])
             p2 = str(self.inverse_bit_mapping[b2])
-            output.append(p1)
-            output.append(p2)
+            output.append(int(p1))
+            output.append(int(p2))
         return output

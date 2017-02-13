@@ -1,4 +1,5 @@
 from hardware_abstract_layer import Adafruit_PCA9685
+
 # import Adafruit_PCA9685
 """PWM class interface between Adafruit_PCA9685 and HawkSDK"""
 
@@ -74,7 +75,6 @@ class PWM:
 
 
 class ControlInputToPWM:
-
     def __init__(self):
         # servo values initialization
 
@@ -99,11 +99,9 @@ class ControlInputToPWM:
         if servo_or_motor == 1:
             x = self.servo_mid  # mid value of servo
             y = (self.servo_range / 2) * float(percentage)  # get the percentage change positive or negative
-
         elif servo_or_motor == 2:
-            x = self.motor_mid  # mid value of motor
+            x = self.motor_mid  # min value of motor
             y = (self.motor_range / 2) * float(percentage)  # get the percentage change positive or negative
-
         return int(x + y)  # return mid value + the change in input (+ or -)
 
     def bit_precision_8_mid_map(self, percentage, servo_or_motor):
@@ -122,6 +120,28 @@ class ControlInputToPWM:
 
         return int(x + y)  # return mid value + the change in input (+ or -)
 
+    def bit_precision_4_full_map(self, percentage, servo_or_motor):
+        x = 0
+        y = 0
+        percentage /= 10.
+        if servo_or_motor == 1:
+            x = self.servo_min
+            y = self.servo_range * float(percentage)
+        elif servo_or_motor == 2:
+            x = self.motor_min
+            y = self.motor_range * float(percentage)
 
+        return int(x + y)
 
+    def bit_precision_8_full_map(self, percentage, servo_or_motor):
+        x = 0
+        y = 0
+        percentage /= 100.
+        if servo_or_motor == 1:
+            x = self.servo_min
+            y = self.servo_range * float(percentage)
+        elif servo_or_motor == 2:
+            x = self.motor_min
+            y = self.motor_range * float(percentage)
 
+        return int(x + y)

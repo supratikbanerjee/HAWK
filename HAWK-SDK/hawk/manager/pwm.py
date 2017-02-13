@@ -48,21 +48,22 @@ class PWMControlManager:
             self.pwm = self.ToPWM.bit_precision_4_mid_map(percentage, 1)
         elif bit_precision == 8:
             self.pwm = self.ToPWM.bit_precision_8_mid_map(percentage, 1)
+        else:
+            raise ValueError("ERROR: bit-precision not defined")
         return self.pwm
 
-    def map_motor_full_range_pwm(self, percentage, bit_precision):
+    def map_servo_full_range_pwm(self, percentage, bit_precision):
         """ map the input percentage to PCA9685 motor PWM value MIN to MAX"""
-        x = self.ToPWM.motor_mid
-        y = 0
         ''' 4-bit precision ranges from 1-9 and 8-bit ranges 1-99 '''
         if bit_precision == 4:
-            y = self.ToPWM.motor_range * (percentage / 9.)  # divide by 9 to keep 4-bit precision range
+            self.pwm = self.ToPWM.bit_precision_4_full_map(percentage, 1)
         elif bit_precision == 8:
-            y = self.ToPWM.motor_range * (percentage / 99.)  # divide by 99 to keep 8-bit precision range
+            self.pwm = self.ToPWM.bit_precision_8_full_map(percentage, 1)
+        else:
+            raise ValueError('ERROR: bit-precision not defined')
+        return self.pwm
 
-        return int(x + y)
-
-    def map_motor_med_range_pwm(self, percentage, bit_precision):
+    def map_motor_mid_range_pwm(self, percentage, bit_precision):
         """ map the input percentage to PCA9685 motor PWM value CENTERED """
 
         ''' 4-bit precision ranges from 1-9 and 8-bit ranges 1-99 '''
@@ -70,6 +71,17 @@ class PWMControlManager:
             self.pwm = self.ToPWM.bit_precision_4_mid_map(percentage, 2)
         elif bit_precision == 8:
             self.pwm = self.ToPWM.bit_precision_8_mid_map(percentage, 2)
-
         return self.pwm
+
+    def map_motor_full_range_pwm(self, percentage, bit_precision):
+        """ map the input percentage to PCA9685 motor PWM value MIN to MAX"""
+        ''' 4-bit precision ranges from 1-9 and 8-bit ranges 1-99 '''
+        if bit_precision == 4:
+            self.pwm = self.ToPWM.bit_precision_4_full_map(percentage, 2)
+        elif bit_precision == 8:
+            self.pwm = self.ToPWM.bit_precision_8_full_map(percentage, 2)
+        else:
+            raise ValueError('ERROR: bit-precision not defined')
+        return self.pwm
+
 

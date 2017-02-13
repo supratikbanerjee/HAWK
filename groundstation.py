@@ -1,10 +1,12 @@
 from manager import io
 from manager import telemetry
+from manager import pwm
 
 TelemetryManager = telemetry.TelemetryManager()
 CompressionManager = telemetry.CompressionManager()
 InputControlManager = io.InputControlManager()
 InputDeviceManager = io.InputDeviceManager()
+PWMControlManager = pwm.PWMControlManager()
 
 j = InputDeviceManager.get_device()
 print("joystick detected", j)
@@ -40,6 +42,11 @@ while 1:
 
         dmssg = CompressionManager.decompress_4_bits(mssg)
         print(dmssg)
+        print(PWMControlManager.map_servo_mid_range_pwm(dmssg[0], 4), dmssg[0])
+        print(PWMControlManager.map_servo_mid_range_pwm(dmssg[1], 4), dmssg[1])
+        print(PWMControlManager.map_servo_mid_range_pwm(dmssg[2], 4), dmssg[2])
+        print(PWMControlManager.map_motor_full_range_pwm(dmssg[3], 4), dmssg[3])
+        print(dmssg[4], dmssg[5])
 
 
         # TelemetryManager.send(mssg, connection)
