@@ -1,3 +1,20 @@
+# Copyright (C) 2017 HAWK-OS
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+
+#    http://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Supratik Banerjee(drakula941)
+
+
 from hardware_abstract_layer import network
 
 
@@ -18,11 +35,11 @@ class TelemetryManager:
 
     def send(self, data, connection):
         """Send data over network in string format"""
-        return connection.send(data.encode())
+        return connection.send(data)
 
     def receive(self, size, connection):
         """Receive data over network with size argument as integer defining the no. of bytes"""
-        return connection.recv(size).decode()
+        return connection.recv(size)
 
 
 class CompressionManager:
@@ -48,7 +65,7 @@ class CompressionManager:
         byte = bytes([z[0]])
         return byte
 
-    '''def compress_4_bits(self, inputs):
+    '''def compress_8_bits(self, inputs):
         for inp in inputs:
             self.byte_string += self.get_byte(inp)
         return self.byte_string'''
@@ -61,6 +78,6 @@ class CompressionManager:
             b2 = s[4:]
             p1 = str(self.inverse_bit_mapping[b1])
             p2 = str(self.inverse_bit_mapping[b2])
-            output.append(int(p1))
-            output.append(int(p2))
+            output.append(int(p1))  # need to change return type
+            output.append(int(p2))  # need to change return type
         return output

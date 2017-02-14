@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac93dae6-6ee4-418f-b72c-9a04c12180a4" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/flightcontrol.py" afterPath="$PROJECT_DIR$/Examples/flightcontrol.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/groundstation.py" afterPath="$PROJECT_DIR$/Examples/groundstation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Examples/flightcontrol.py" afterPath="$PROJECT_DIR$/Examples/flightcontrol.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Examples/groundstation.py" afterPath="$PROJECT_DIR$/Examples/groundstation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,10 +28,10 @@
       <file leaf-file-name="pwm.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="60" column="72" lean-forward="false" selection-start-line="60" selection-start-column="72" selection-end-line="60" selection-end-column="72" />
+            <state relative-caret-position="352">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#606#649#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -34,8 +40,8 @@
       <file leaf-file-name="pwm.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="125" column="25" lean-forward="true" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+            <state relative-caret-position="330">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -44,11 +50,21 @@
       <file leaf-file-name="io.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-280">
-              <caret line="81" column="24" lean-forward="true" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+            <state relative-caret-position="-2238">
+              <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#606#619#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Adafruit_PCA9685.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-60">
+              <caret line="3" column="44" lean-forward="false" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,8 +72,8 @@
       <file leaf-file-name="telemetry.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+            <state relative-caret-position="1144">
+              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,30 +82,32 @@
       <file leaf-file-name="flightcontrol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Examples/flightcontrol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="groundstation.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Examples/groundstation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="48" column="33" lean-forward="true" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+            <state relative-caret-position="226">
+              <caret line="26" column="65" lean-forward="true" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#606#628#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="groundstation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Examples/groundstation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1364">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding>
+                <element signature="e#606#628#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="network.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
-              <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="53" />
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,15 +138,17 @@
         <option value="$PROJECT_DIR$/HAWK-SDK/__init__.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/__init__.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py" />
-        <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py" />
-        <option value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/groundstation.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/flightcontrol.py" />
-        <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py" />
-        <option value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py" />
         <option value="$PROJECT_DIR$/groundstation.py" />
+        <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py" />
+        <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py" />
+        <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py" />
+        <option value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py" />
+        <option value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py" />
+        <option value="$PROJECT_DIR$/Examples/groundstation.py" />
+        <option value="$PROJECT_DIR$/Examples/flightcontrol.py" />
       </list>
     </option>
   </component>
@@ -163,6 +183,82 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="HAWK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK-SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK-SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hawk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK-SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hawk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exceptions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HAWK-SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hardware_abstract_layer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -215,23 +311,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="telemetry" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HAWK-SDK/hawk/manager" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="HAWK" />
-      <option name="SCRIPT_NAME" value="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\HAWK-SDK\hawk\manager\telemetry.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="groundstation (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,6 +358,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="HAWK" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/groundstation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="flightcontrol" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="HAWK" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/flightcontrol.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -419,18 +515,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.groundstation (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.telemetry" />
-      <item index="2" class="java.lang.String" itemvalue="Python.groundstation (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.pwm (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.groundstation (3)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.groundstation (2)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.pwm (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.groundstation (3)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.flightcontrol" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.groundstation (3)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.groundstation (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.pwm (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.groundstation (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.telemetry" />
+        <item index="1" class="java.lang.String" itemvalue="Python.flightcontrol" />
+        <item index="2" class="java.lang.String" itemvalue="Python.groundstation (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.pwm (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.groundstation (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -449,9 +545,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -805,73 +901,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py">
+    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="53" />
+        <state relative-caret-position="1144">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Examples/flightcontrol.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-280">
-          <caret line="81" column="24" lean-forward="true" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        <state relative-caret-position="226">
+          <caret line="26" column="65" lean-forward="true" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="125" column="25" lean-forward="true" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="60" column="72" lean-forward="false" selection-start-line="60" selection-start-column="72" selection-end-line="60" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#606#628#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Examples/groundstation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="48" column="33" lean-forward="true" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+        <state relative-caret-position="1364">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#606#628#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="3" column="44" lean-forward="false" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2238">
+          <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+          <folding>
+            <element signature="e#606#619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#606#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

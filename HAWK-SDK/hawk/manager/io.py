@@ -1,3 +1,20 @@
+# Copyright (C) 2017 HAWK-OS
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+
+#    http://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Supratik Banerjee(drakula941)
+
+
 import pygame
 from pygame.locals import *
 from hardware_abstract_layer.pwm import ControlInputToPWM
@@ -39,11 +56,13 @@ class InputControlManager:
         if device_input < -threshold:
             self.percentage_mid_range = 5 - int((abs(device_input) * 9) / 2)
         elif device_input > threshold:
-
             self.percentage_mid_range = int((abs(device_input) * 9) / 2) + 5
         else:
             self.percentage_mid_range = 5
         return self.percentage_mid_range
+
+    def invert_controller_input(self, device_input):
+        return int(10 - device_input)
 
 
 class InputDeviceManager:
@@ -61,6 +80,8 @@ class InputDeviceManager:
 
         self.ort = 0
         self.olt = 0
+
+        self.ot = 0
 
         self.button_state = 'up'
 
@@ -142,6 +163,14 @@ class InputDeviceManager:
                 else:
                     lt = self.olt
         return lt
+
+    def get_triggers(self, event):
+        bt = self.ot
+        if event.type == JOYAXISMOTION:
+            if event.axis == 2:
+                bt = event.value
+                self.ot = bt
+        return self.ot
 
     def get_button_state(self, event, button):
         state = self.button_state

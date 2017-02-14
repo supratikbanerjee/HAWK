@@ -1,3 +1,20 @@
+# Copyright (C) 2017 HAWK-OS
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+
+#    http://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Supratik Banerjee(drakula941)
+
+
 from manager import io
 from manager import telemetry
 from manager import pwm
@@ -8,6 +25,8 @@ InputControlManager = io.InputControlManager()
 InputDeviceManager = io.InputDeviceManager()
 PWMControlManager = pwm.PWMControlManager()
 
+ip = str(input('Enter HAWK-OS IP'))
+connection = TelemetryManager.initialize_client_connection(ip, 12345)
 j = InputDeviceManager.get_device()
 print("joystick detected", j)
 bX = 0
@@ -19,35 +38,25 @@ while 1:
         ly = InputDeviceManager.get_l_y_axis(e)
         rx = InputDeviceManager.get_r_x_axis(e)
         ry = InputDeviceManager.get_r_y_axis(e)
-        rt = InputDeviceManager.get_r_trigger(e)
-        lt = InputDeviceManager.get_l_trigger(e)
+        bt = InputDeviceManager.get_triggers(e)
         bstate3 = InputDeviceManager.get_button_state(e, 3)
         bstate2 = InputDeviceManager.get_button_state(e, 2)
 
         if bstate3 == 'down':
             bY = 1
             bX = 0
-        elif bstate2 == 'down':
+        if bstate2 == 'down':
             bX = 1
             bY = 0
-        print(lx, ly, rx, rt, bX, bY)
+        print(lx, ly, rx, bt, ry, bY)
 
-        mssg = CompressionManager.compress_4_bits(str(InputControlManager.input_percentage_mid_range(lx, 0.25)) + str(
+        compressed_inputs = CompressionManager.compress_4_bits(str(InputControlManager.input_percentage_mid_range(lx, 0.25)) + str(
             InputControlManager.input_percentage_mid_range(ly, 0.25))) + CompressionManager.compress_4_bits(
             str(InputControlManager.input_percentage_mid_range(rx, 0.25)) + str(
-                InputControlManager.input_percentage_full_range(rt, 0.15))) + CompressionManager.compress_4_bits(
-            str(bX) + str(bY))
-        print(type(mssg))
-        print(mssg)
+                InputControlManager.input_percentage_mid_range(bt, 0.15))) + CompressionManager.compress_4_bits(
+            str(InputControlManager.input_percentage_mid_range(ry, 0.25)) + str(bY))
+        print(type(compressed_inputs))
+        print(compressed_inputs)
 
-        dmssg = CompressionManager.decompress_4_bits(mssg)
-        print(dmssg)
-        print(PWMControlManager.map_servo_mid_range_pwm(dmssg[0], 4), dmssg[0])
-        print(PWMControlManager.map_servo_mid_range_pwm(dmssg[1], 4), dmssg[1])
-        print(PWMControlManager.map_servo_mid_range_pwm(dmssg[2], 4), dmssg[2])
-        print(PWMControlManager.map_motor_full_range_pwm(dmssg[3], 4), dmssg[3])
-        print(dmssg[4], dmssg[5])
-
-
-        # TelemetryManager.send(mssg, connection)
-        # TelemetryManager.receive(1, connection)
+        TelemetryManager.send(compressed_inputs, connection)
+        TelemetryManager.receive(1, connection)
