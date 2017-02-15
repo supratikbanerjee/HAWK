@@ -5,12 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Examples/flightcontrol.py" afterPath="$PROJECT_DIR$/Examples/flightcontrol.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Examples/groundstation.py" afterPath="$PROJECT_DIR$/Examples/groundstation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py" afterPath="$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2238">
-              <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+              <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
               <folding>
                 <element signature="e#606#619#0" expanded="true" />
               </folding>
@@ -82,28 +77,28 @@
       <file leaf-file-name="flightcontrol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Examples/flightcontrol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="26" column="65" lean-forward="true" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+            <state relative-caret-position="402">
+              <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
               <folding>
-                <element signature="e#606#628#0" expanded="true" />
+                <element signature="e#606#633#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="groundstation.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="groundstation.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Examples/groundstation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="358">
+              <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
               <folding>
-                <element signature="e#606#628#0" expanded="true" />
+                <element signature="e#606#633#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="network.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
@@ -137,18 +132,18 @@
         <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/__init__.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/__init__.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/__init__.py" />
-        <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/HAWK-SDK/groundstation.py" />
-        <option value="$PROJECT_DIR$/HAWK-SDK/flightcontrol.py" />
         <option value="$PROJECT_DIR$/groundstation.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/pwm.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/pwm.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py" />
-        <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/telemetry.py" />
         <option value="$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py" />
         <option value="$PROJECT_DIR$/Examples/groundstation.py" />
+        <option value="$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/network.py" />
         <option value="$PROJECT_DIR$/Examples/flightcontrol.py" />
+        <option value="$PROJECT_DIR$/HAWK-SDK/flightcontrol.py" />
+        <option value="$PROJECT_DIR$/HAWK-SDK/groundstation.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
       </list>
     </option>
   </component>
@@ -217,32 +212,6 @@
               <option name="myItemId" value="hawk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HAWK-SDK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hawk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exceptions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -287,10 +256,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\Examples" />
+      <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\HAWK-SDK" />
       <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK" />
       <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\HAWK-SDK\hawk\manager" />
       <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\HAWK-SDK\hawk" />
-      <recent name="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\HAWK-SDK" />
     </key>
   </component>
   <component name="RunManager" selected="Python.groundstation (3)">
@@ -357,7 +326,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="HAWK" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/groundstation.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\Examples\groundstation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -374,7 +343,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="HAWK" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/flightcontrol.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Supratik Banerjee\Documents\GitHub\HAWK\Examples\flightcontrol.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -880,13 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HAWK-SDK/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -909,26 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/flightcontrol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="26" column="65" lean-forward="true" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
-          <folding>
-            <element signature="e#606#628#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/groundstation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="e#606#628#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HAWK-SDK/hardware_abstract_layer/Adafruit_PCA9685.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-60">
@@ -940,7 +882,7 @@
     <entry file="file://$PROJECT_DIR$/HAWK-SDK/hawk/manager/io.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2238">
-          <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+          <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
           <folding>
             <element signature="e#606#619#0" expanded="true" />
           </folding>
@@ -970,6 +912,34 @@
         <state relative-caret-position="418">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/flightcontrol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+          <folding>
+            <element signature="e#606#633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/groundstation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+          <folding>
+            <element signature="e#606#633#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

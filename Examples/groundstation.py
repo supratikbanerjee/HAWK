@@ -15,9 +15,9 @@
 # Supratik Banerjee(drakula941)
 
 
-from manager import io
-from manager import telemetry
-from manager import pwm
+from hawk.manager import io
+from hawk.manager import telemetry
+from hawk.manager import pwm
 
 TelemetryManager = telemetry.TelemetryManager()
 CompressionManager = telemetry.CompressionManager()
