@@ -16,14 +16,22 @@
 
 
 import socket
-
+#import struct
 '''Network Adapter wrapper around python for managing proper network communication'''
 
 
 class NetworkAdapter:
     def __init__(self):
-        self.IP = socket.gethostbyname(socket.gethostname())
+        self.IP = '192.168.0.110'
         self.port = 12345
+
+    '''def get_ip_address(self, ifname):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        return socket.inet_ntoa(fcntl.ioctl(
+            s.fileno(),
+            0x8915,  # SIOCGIFADDR
+            struct.pack('256s', ifname[:15])
+        )[20:24])'''
 
     def initialize_server_connection(self, port):
         """Initializing Server connection"""
