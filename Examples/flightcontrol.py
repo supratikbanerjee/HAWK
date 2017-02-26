@@ -22,21 +22,24 @@ from hawk.manager import pwm
 TelemetryManager = telemetry.TelemetryManager()
 CompressionManager = telemetry.CompressionManager()
 PWMControlManager = pwm.PWMControlManager()
+PWM = pwm.PWM()
 InputControlManager = io.InputControlManager()
 
 connection = TelemetryManager.initialize_server_connection(12345)
-
+PWM.set_frequency(50)
 while 1:
     compressed_inputs = TelemetryManager.receive(3, connection)
     TelemetryManager.send(bytes(1), connection)
     print(compressed_inputs)
     decompressed_inputs = CompressionManager.decompress_4_bits(compressed_inputs)
     print(decompressed_inputs)
-    print(PWMControlManager.map_servo_mid_range_pwm(decompressed_inputs[0], 4), decompressed_inputs[0])
-    print(PWMControlManager.map_servo_mid_range_pwm(decompressed_inputs[1], 4), decompressed_inputs[1])
+    PWM.set_servo_value(0, PWMControlManager.map_servo_mid_range_pwm(decompressed_inputs[0], 4))
+    PWM.set_servo_value(1, PWMControlManager.map_servo_mid_range_pwm(decompressed_inputs[0], 4))
+    PWM.set_servo_value(2, PWMControlManager.map_servo_mid_range_pwm(decompressed_inputs[1], 4))
     print(PWMControlManager.map_servo_mid_range_pwm(decompressed_inputs[2], 4), decompressed_inputs[2])
-    print(PWMControlManager.map_servo_mid_range_pwm(decompressed_inputs[3], 4), decompressed_inputs[3])
-    print(PWMControlManager.map_motor_full_range_pwm(InputControlManager.invert_controller_input(decompressed_inputs[4])
-                                                     , 4),
-          InputControlManager.invert_controller_input(decompressed_inputs[4]))
+    PWM.set_servo_value(3, PWMControlManager.map_servo_mid_range_pwm(decompressed_inputs[3], 4))
+    PWM.set_motor_value(15,
+                        PWMControlManager.map_motor_full_range_pwm(
+                            InputControlManager.invert_controller_input(decompressed_inputs[4])
+                            , 4))
     print(decompressed_inputs[5])
