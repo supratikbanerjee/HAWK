@@ -31,17 +31,18 @@ class InputControlManager:
     def set_exponential_dual_rate(self, exponential_value, dual_rate_value, percentage, bit_precision):
         """ Defining relationship between expo and dual rates."""
         if bit_precision == 4:  # subtract by mid value of the percentage
-            percentage -= 5  # since it oscillates between -1 to 1
-            percentage *= 2  # multiply to get percentage change
-            percentage /= 10.  # divide to get the percentage for 4-bit
+            percentage /= 5  # since it oscillates between 0 to 10
+            percentage -= 1  # Adjusting value for -1 to 1 range
         elif bit_precision == 8:
-            percentage -= 50  # the same concept as above implies for 8 bit
-            percentage *= 2  # values adjusted for 1-99 range
-            percentage /= 100.
+            percentage /= 50  # the same concept as above implies for 8 bit
+            percentage -= 1  # Adjusting value for -1 to 1 range
 
         self.servo_move = (((abs(percentage) == percentage) * 2) - 1) * (
             abs(percentage) ** (4 ** (exponential_value / 100))) * (dual_rate_value / 100)
-        return self.servo_move
+        if bit_precision == 4:
+            return int((round(self.servo_move*10))+5)
+        elif bit_precision == 8:
+            pass  # TODO
 
     def input_percentage_full_range(self, device_input, threshold):
         """Movement of servo or motor from 0-100 with 0 as starting point"""

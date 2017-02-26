@@ -50,8 +50,20 @@ while 1:
             bY = 0
         print(lx, ly, rx, bt, ry, bY)
 
-        compressed_inputs = CompressionManager.compress_4_bits(str(InputControlManager.input_percentage_mid_range(lx, 0.25)) + str(
-            InputControlManager.input_percentage_mid_range(ly, 0.25))) + CompressionManager.compress_4_bits(
+        print('lx', str(InputControlManager.set_exponential_dual_rate(50, 50, int(
+            InputControlManager.input_percentage_mid_range(lx, 0.25)), 4)),
+              int(InputControlManager.input_percentage_mid_range(lx, 0.25)))
+
+        print('ly', str(
+            InputControlManager.set_exponential_dual_rate(
+                50, 50, int(InputControlManager.input_percentage_mid_range(ly, 0.25)),
+                4)), int(InputControlManager.input_percentage_mid_range(ly, 0.25)))
+
+        compressed_inputs = CompressionManager.compress_4_bits(str(InputControlManager.set_exponential_dual_rate(
+            50, 50, int(InputControlManager.input_percentage_mid_range(lx, 0.25)), 4)) + str(
+            InputControlManager.set_exponential_dual_rate(
+                50, 50, int(InputControlManager.input_percentage_mid_range(ly, 0.25)),
+                4))) + CompressionManager.compress_4_bits(
             str(InputControlManager.input_percentage_mid_range(rx, 0.25)) + str(
                 InputControlManager.input_percentage_mid_range(bt, 0.15))) + CompressionManager.compress_4_bits(
             str(InputControlManager.input_percentage_mid_range(ry, 0.25)) + str(bY))
