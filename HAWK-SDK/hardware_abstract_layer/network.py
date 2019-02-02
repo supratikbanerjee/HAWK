@@ -16,27 +16,28 @@
 
 
 import socket
-#import struct
+
+# import struct
 '''Network Adapter wrapper around python for managing proper network communication'''
 
 
 class NetworkAdapter:
     def __init__(self):
-        self.IP = '192.168.0.110'
+        self.IP = '10.243.34.106'
         self.port = 12345
+        self.network_file_linux = '/proc/net/wireless'
 
-    '''def get_ip_address(self, ifname):
+    def get_ip_address(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        return socket.inet_ntoa(fcntl.ioctl(
-            s.fileno(),
-            0x8915,  # SIOCGIFADDR
-            struct.pack('256s', ifname[:15])
-        )[20:24])'''
+        s.connect(("8.8.8.8", 80))
+        self.IP = s.getsockname()[0]
+        s.close()
+        return self.IP
 
-    def initialize_server_connection(self, port):
+    def initialize_server_connection(self, ip_address, port):
         """Initializing Server connection"""
         self.port = port
-        address = (self.IP, self.port)
+        address = (ip_address, self.port)
         server_socket = socket.socket()
         server_socket.bind(address)
         server_socket.listen(1)
@@ -49,3 +50,23 @@ class NetworkAdapter:
         client_socket = socket.socket()
         client_socket.connect((ip_address, port))
         return client_socket
+
+    def initialize_udp_connection(self):
+        return socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+    def bind_udp(self, connection, ip_address, port):
+        return connection.bind((ip_address, port))
+
+    def get_network_strength(self, network_file_linux):
+        self.network_file_linux = network_file_linux
+        file = open(self.network_file_linux, 'r')
+        line = file.readlines()
+        tl = []
+        for i in line:
+            tl = i.split(" ")
+        if tl[6] == '':
+            network_strength = tl[7]
+        else:
+            network_strength = tl[6]
+        print(network_strength)
+        return int(network_strength[:-1])

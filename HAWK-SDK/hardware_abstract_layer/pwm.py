@@ -24,6 +24,8 @@ from hardware_abstract_layer import Adafruit_PCA9685
 class PWM:
     def __init__(self):
         """PWM default settings at initialization"""
+        self.frequency = 60
+        self.pulse_length = 1000000    # 1,000,000 us per second
         self._PWM = Adafruit_PCA9685.PCA9685()
         self._PWM.set_pwm_freq(60)  # set default frequency @60 Hz
         self._PWM.set_all_pwm(0, 0)  # set all pwm values to 0
@@ -39,7 +41,18 @@ class PWM:
         self.motorChannelList = dict()  # initialize dictionary to map motor channel to name
 
     def set_frequency(self, frequency):
-        self._PWM.set_pwm_freq(frequency)  # set user defined frequency
+        self.frequency = frequency
+        self._PWM.set_pwm_freq(self.frequency)  # set user defined frequency
+
+    def set_pwm_pulsewidth(self, channel, pulse):
+        self.pulse_length = 1000000
+        self.pulse_length //= self.frequency       # 60 Hz
+        # print('{0}us per period'.format(pulse_length))
+        self.pulse_length //= 4096     # 12 bits of resolution
+        # print('{0}us per bit'.format(pulse_length))
+        # pulse *= 1000
+        pulse //= self.pulse_length
+        self._PWM.set_pwm(channel, 0, pulse)
 
         '''Servo functions'''
 
@@ -64,7 +77,7 @@ class PWM:
             channel = channel_name  # if integer, assign channel as parameter
         else:
             channel = int(self.servoChannelList[channel_name])  # if servo name, map dictionary to retrieve channel
-        self._PWM.set_pwm(channel, 0, value)  # assign parameter value to servo
+        self.set_pwm_pulsewidth(channel, value)  # assign parameter value to servo
 
     '''Motor functions'''
 
@@ -88,24 +101,24 @@ class PWM:
             channel = channel_name  # if integer, assign channel as parameter
         else:
             channel = int(self.motorChannelList[channel_name])  # if servo name, map dictionary to retrieve channel
-        self._PWM.set_pwm(channel, 0, value)  # assign parameter value to servo
+        self.set_pwm_pulsewidth(channel, value)  # assign parameter value to servo
 
 
 class ControlInputToPWM:
     def __init__(self):
         # servo values initialization
 
-        self.servo_mid = 375
-        self.servo_max = 600
-        self.servo_min = 150
-        self.servo_range = 450
+        self.servo_mid = 1500
+        self.servo_max = 2000
+        self.servo_min = 1000
+        self.servo_range = 1000
 
         # motor value initialization
 
-        self.motor_mid = 380
-        self.motor_min = 280
-        self.motor_max = 480
-        self.motor_range = 200
+        self.motor_mid = 1500
+        self.motor_min = 1000
+        self.motor_max = 2000
+        self.motor_range = 1000
 
     def bit_precision_4_mid_map(self, percentage, servo_or_motor):
         x = 0
@@ -124,9 +137,9 @@ class ControlInputToPWM:
     def bit_precision_8_mid_map(self, percentage, servo_or_motor):
         x = 0
         y = 0
-        percentage -= 50  # since it oscillates between -1 to 1
+        percentage -= 127  # since it oscillates between -1 to 1
         percentage *= 2  # multiply to get percentage change
-        percentage /= 100.  # divide to get the percentage for 4-bit
+        percentage /= 255.  # divide to get the percentage for 4-bit
         if servo_or_motor == 1:
             x = self.servo_mid  # mid value of servo
             y = (self.servo_range / 2) * float(percentage)  # get the percentage change positive or negative
@@ -153,7 +166,7 @@ class ControlInputToPWM:
     def bit_precision_8_full_map(self, percentage, servo_or_motor):
         x = 0
         y = 0
-        percentage /= 100.
+        percentage /= 255.
         if servo_or_motor == 1:
             x = self.servo_min
             y = self.servo_range * float(percentage)

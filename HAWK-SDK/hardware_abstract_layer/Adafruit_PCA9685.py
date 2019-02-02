@@ -19,11 +19,11 @@ class PCA9685:
     def __init__(self):
         pass
 
-    def set_pwm_freq(self, freq):
+    def set_pwm_freq(self, freq):             #setting pwm frequency
         pass
 
-    def set_pwm(self, channel, on, off):
+    def set_pwm(self, channel, on, off):      #setting pwm channel and state
         pass
 
-    def set_all_pwm(self, on, off):
+    def set_all_pwm(self, on, off):          #setting pwm state
         pass
