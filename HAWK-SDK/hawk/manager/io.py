@@ -17,6 +17,7 @@
 
 import pygame
 from pygame.locals import *
+
 from hardware_abstract_layer.pwm import ControlInputToPWM
 
 
@@ -28,48 +29,56 @@ class InputControlManager:
         self.pwm = 0
         self.ToPWM = ControlInputToPWM()
 
-    def set_exponential_dual_rate(self, exponential_value, dual_rate_value, percentage, bit_precision):
+    def set_exponential_dual_rate(self, exponential_value, dual_rate_value, percentage):
         """ Defining relationship between expo and dual rates."""
-        if bit_precision == 4:  # subtract by mid value of the percentage
-            percentage /= 5  # since it oscillates between 0 to 10
-            percentage -= 1  # Adjusting value for -1 to 1 range
-        elif bit_precision == 8:
-            percentage /= 50  # the same concept as above implies for 8 bit
-            percentage -= 1  # Adjusting value for -1 to 1 range
+        exponential_value /= 100
+        dual_rate_value /= 100
+        # print(dual_rate_value, exponential_value, percentage)
+        dr_expo = ((dual_rate_value - (1 - exponential_value))*(percentage**3)) + ((1-exponential_value) * percentage)
+        return dr_expo
 
-        self.servo_move = (((abs(percentage) == percentage) * 2) - 1) * (
-            abs(percentage) ** (4 ** (exponential_value / 100))) * (dual_rate_value / 100)
-        if bit_precision == 4:
-            return int((round(self.servo_move*10))+5)
-        elif bit_precision == 8:
-            pass  # TODO
-
-    def input_percentage_full_range(self, device_input, threshold):
+    def input_percentage_full_range(self, device_input, threshold, bit_precesion):
         """Movement of servo or motor from 0-100 with 0 as starting point"""
+        max = 256
+        if bit_precesion == 4:
+            max = 10
         if device_input < threshold:  # ideally -0.15 or 0.15
-            self.percentage_full_range = int((abs(device_input) * 10))
+            self.percentage_full_range = int(round((abs(device_input) * max)))
         else:
             self.percentage_full_range = 0
+
         return self.percentage_full_range
 
-    def input_percentage_mid_range(self, device_input, threshold):
+    def input_percentage_mid_range(self, device_input, threshold, bit_precision):
         """Movement of servo or motor from 0-50-100 where 50 (mid) is the starting point."""
+        #if device_input <= -0.97:
+        #    self.percentage_mid_range = 0
+        #elif device_input >= 0.97:
+        #    self.percentage_mid_range = 10
+        mid = 127
+        max = 255
+        if bit_precision == 4:
+            mid = 5
+            max = 10
         if device_input < -threshold:
-            self.percentage_mid_range = 5 - int((abs(device_input) * 9) / 2)
+            self.percentage_mid_range = mid - int((abs(device_input) * max) / 2)
         elif device_input > threshold:
-            self.percentage_mid_range = int((abs(device_input) * 9) / 2) + 5
+            self.percentage_mid_range = int((abs(device_input) * max) / 2) + mid
         else:
-            self.percentage_mid_range = 5
+            self.percentage_mid_range = mid
         return self.percentage_mid_range
 
-    def invert_controller_input(self, device_input):
-        return int(10 - device_input)
+    def invert_controller_input(self, device_input, bit_precision):
+        max = 255
+        if bit_precision == 4:
+            max = 10
+        return int(max - device_input)
 
 
 class InputDeviceManager:
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((640, 480))
+        self.screen = pygame.display.set_mode((10, 10))
         pygame.display.set_caption("H.A.W.K")
         self.clock = pygame.time.Clock()
 
@@ -88,6 +97,18 @@ class InputDeviceManager:
 
         self.joysticks = []
 
+        '''self.hat = {
+            (0, 0): 'c',
+            (1, 0): 'E', (1, 1): 'NE', (0, 1): 'N', (-1, 1): 'NW',
+            (-1, 0): 'W', (-1, -1): 'SW', (0, -1): 'S', (1, -1): 'SE'
+        }'''
+
+        self.hat = {
+            (0, 0): 0,
+            (1, 0): 1, (1, 1): 5, (0, 1): 2, (-1, 1): 6,
+            (-1, 0): 3, (-1, -1): 7, (0, -1): 4, (1, -1): 8
+        }
+
         self.event = pygame.event.get()
 
     # def get_event_type(self, event):
@@ -104,6 +125,9 @@ class InputDeviceManager:
     def get_event(self):
         self.event = pygame.event.get()
         return self.event
+
+    def input_wait(self):
+        return pygame.event.wait()
 
     def get_l_x_axis(self, event):
         x = self.olx
@@ -174,7 +198,7 @@ class InputDeviceManager:
         return self.ot
 
     def get_button_state(self, event, button):
-        state = self.button_state
+        self.button_state = 'up'
         if event.type == JOYBUTTONDOWN:
             if event.button == button:  # checks whether the button used in event is button pressed.
                 state = 'down'
@@ -183,4 +207,10 @@ class InputDeviceManager:
             if event.button == button:
                 state = 'up'
                 self.button_state = state
-        return state
+        return self.button_state
+
+    def get_dpad(self, event):
+        hat_button = 0
+        if event.type == JOYHATMOTION:
+            hat_button = self.hat[event.value]
+        return hat_button

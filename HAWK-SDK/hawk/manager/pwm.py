@@ -23,31 +23,31 @@ class PWMManager:
     def __init__(self):
         self.PWM = PWM()
 
-    def set_pwm_frequency(self, frequency):
+    def set_pwm_frequency(self, frequency):                # setting pwm frequecy
         self.PWM.set_frequency(frequency)
 
-    def set_servo(self, channel, servo_name):
+    def set_servo(self, channel, servo_name):              # setting servo name and channel
         self.PWM.set_servo(channel, servo_name)
 
-    def get_servo_name(self, channel):
+    def get_servo_name(self, channel):                     # getting servo channel
         self.PWM.get_servo_name(channel)
 
-    def get_servo_channel(self, servo_name):
+    def get_servo_channel(self, servo_name):               # getting servo name
         self.PWM.get_servo_channel(servo_name)
 
-    def set_servo_value(self, channel_name, value):
+    def set_servo_value(self, channel_name, value):        # setting servo value
         self.PWM.set_servo_value(channel_name, value)
 
-    def set_motor(self, channel, motor_name):
+    def set_motor(self, channel, motor_name):              # setting channel for motor
         self.PWM.set_motor(channel, motor_name)
 
-    def get_motor_name(self, channel):
+    def get_motor_name(self, channel):                     # getting motor name
         self.PWM.get_motor_name(channel)
 
-    def get_motor_channel(self, motor_name):
+    def get_motor_channel(self, motor_name):               # getting motor channel
         self.PWM.get_motor_channel(motor_name)
 
-    def set_motor_value(self, channel_name, value):
+    def set_motor_value(self, channel_name, value):        # getting motor value
         self.PWM.set_motor_value(channel_name, value)
 
 
